@@ -1,0 +1,40 @@
+body {
+  background-color: darkslategrey;
+  margin: 0;
+  padding: 0px;
+}
+header {
+  margin-top: 20px;
+  margin-bottom: 120px;
+}
+.console-container {
+  padding: 10px 0px;
+  height: 200px;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 14px;
+  background-color: black;
+  box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#consoleOutput {
+  color: lime;
+  font-family: 'Courier New', Courier, monospace;
+  width: auto;
+  height: 100%;
+  padding-left: 10px;
+  overflow-y: auto;
+}
+#consoleOutput::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+#consoleOutput::-webkit-scrollbar-thumb {
+  background: lime;
+  border-radius: 6px;
+}
+
+#consoleOutput p {
+  line-height: 0.9;
+  font-size: 16px;
+}
