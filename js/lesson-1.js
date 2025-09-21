@@ -67,9 +67,14 @@ function fromTOSimple() {
 }
 
 function fromToAdvanced(min = 0, max = 10) {
+  let sum = 0;
   for (let i = max; i >= min; i--) {
     console.log(i);
+    if (i % 2 === 0) {
+      sum += i;
+    }
   }
+  return sum;
 }
 function min(a = NaN, b = NaN) {
   return Number.isNaN(a) || Number.isNaN(b) ? 'Not a number!' : Math.min(a, b);
@@ -84,7 +89,7 @@ function isAdult() {
 
 function fizzBuzz(num) {
   if (num === 0) {
-    return `It's 0, you can't divide on 0!\nNo more for you fizzbuzz!`;
+    return `It's 0, you can't divide by 0!\nNo more for you fizzbuzz!`;
   }
   return num % 3 == 0
     ? num % 5 == 0
@@ -94,13 +99,34 @@ function fizzBuzz(num) {
     ? 'buzz'
     : '';
 }
+
+function moreOneHundred() {
+  while (true) {
+    u_input = prompt('type a number above 100');
+
+    if (u_input === null || Number(u_input) >= 100) {
+      console.log(`${u_input}`);
+      return;
+    }
+  }
+}
+
+function testURL(url) {
+  return !url.includes('my-site')
+    ? url
+    : url[url.length - 1] !== '/'
+    ? `${url}/`
+    : url;
+}
 // isNumber();
 // quartal();
 // season();
 // minutesToHoursAndDays();
 // authorization();
 //fromTOSimple();
-// fromToAdvanced();
+// console.log(fromToAdvanced());
 // console.log(min('2', 55));
 // isAdult();
 // console.log(fizzBuzz(0));
+// moreOneHundred();
+// console.log(testURL('https://my-site.com/about'));
